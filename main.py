@@ -1,10 +1,12 @@
 import numpy as np 
 
-def medianOfArray(list1, list2):
-    list1 += list2 
-    print(np.median(list1))
+def medianOfArray(*args):
+    finalList = []
+    for i in args:
+        finalList += i
+    print(np.median(finalList))
 
-medianOfArray([1,3], [2])
+medianOfArray([1,3], [2], [4], [9])
 
 def mergeLists(*arg):
     finalList = []
